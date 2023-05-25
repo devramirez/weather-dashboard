@@ -16,5 +16,25 @@ function initPage() {
     // Assigning unique API key to variable
     const APIKey = "46ba7913be1926fc4e450c9312f4d575";
     
-    
+    function getWeather(cityName) {
+        // Execute a current weather get request from open weather api
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
+        axios.get(queryURL)
+        .then(function (response) {
+            todayweatherEl.classList.remove("d-none");
+
+            // Parse response to display current weather
+            const currentDate = new Date(response.data.dt * 1000);
+            const day = currentDate.getDate();
+            const month = currentDate.getMonth() + 1;
+            const year = currentDate.getFullYear();
+            nameEl.innerHTML = response.date.name + " (" + month + "/" + day + "/" + year + ") ";
+            let weatherPic = response.data.weather[0].icon;
+            currentPicEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
+            currentPicEl.setAttribute("alt", response.data.weather[0].description);
+            currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
+            currentHumidityEl.innerHTML = "Humidty: " + response.data.main.humidity + "%";
+            currentWindEl.innerHTML = "Wind Speed: " + response.data.wind.speed + "MPH";    
+            })
+    }
 }
