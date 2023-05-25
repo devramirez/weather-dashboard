@@ -62,7 +62,16 @@ function initPage() {
 
                 // get 5 day forecast 
 
-                
+                let cityID = response.data.id;
+                let forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=" + APIKey;
+                axios.get(forecastQueryURL)
+                .then(function (response) {
+                    fivedayEl.classList.remove("d-none");
+
+                    
+                }
+
+                )
         
             })
     }
