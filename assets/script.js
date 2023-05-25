@@ -14,7 +14,7 @@ function initPage() {
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
     // Assigning unique API key to variable
-    const APIKey = "46ba7913be1926fc4e450c9312f4d575";
+    const APIKey = "dd3e0bbd723213b467ba17ef2884765c";
 
     function getWeather(cityName) {
         // Execute a current weather get request from open weather api
@@ -97,5 +97,15 @@ function initPage() {
                     })
             });
     }
+
+    // get history from local storage 
+    searchEl.addEventListener("click", function(){
+        const searchTerm = cityEl.value;
+        getWeather(searchTerm);
+        searchHistory.push(searchTerm);
+        localStorage.setItem("search", JSON.stringify(searchHistory));
+        renderSearchHistory();
+
+    })
 
 }
