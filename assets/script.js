@@ -68,6 +68,21 @@ function initPage() {
                 .then(function (response) {
                     fivedayEl.classList.remove("d-none");
 
+                // parse response to display forecast for the next 5 days
+
+                const forecastEls = document.querySelectorAll(".forecast");
+                for (i = 0; i < forecastEls.length; i++) {
+                    forecastEls[i].innerHTML = "";
+                    const forecastDate = new Date(response.data.list[forecastIndex].dt * 1000);
+                    const forecastDay = forecastDate.getDate();
+                    const forecastMonth = forecastDate.getMonth() + 1;
+                    const forecastYear = forecastDate.getFullYear();
+                    const forecastDateEl = document.createElement("p");
+                    forecastDateEl.setAttribute("class", "mt-3 mb-0 forecast-date");
+                    forecastDateEl.innerHTML = forecastMonth + "/" + forecastDay + "/" + forecastYear;
+                    forecastEls[i].append(forecastDateEl);
+                }
+
                     
                 }
 
