@@ -8,7 +8,9 @@ This application shows a five day forecast for whichever city is searched.
 
 
 ## Credits
-![weather-dashboard1](https://github.com/devramirez/weather-dashboard/assets/45980046/b6512781-2dfa-410b-8465-4d59099fd402)
+![weather-dashboard1]
+<img width="1483" alt="weather-dashboard1" src="https://github.com/devramirez/weather-dashboard/assets/45980046/a83b4730-fb1a-4ed9-886c-2a67a6384d8a">
+
 
 I used the following resources to complete this project:
 
