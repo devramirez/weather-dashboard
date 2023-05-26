@@ -4,13 +4,11 @@ This is an application that provides a 5 day weather forecast.
 ## Description
 This application shows a five day forecast for whichever city is searched.
 
-
+[weather-dashboard1]
+<img width="1483" alt="weather-dashboard1" src="https://github.com/devramirez/weather-dashboard/assets/45980046/a83b4730-fb1a-4ed9-886c-2a67a6384d8a">
 
 
 ## Credits
-![weather-dashboard1]
-<img width="1483" alt="weather-dashboard1" src="https://github.com/devramirez/weather-dashboard/assets/45980046/a83b4730-fb1a-4ed9-886c-2a67a6384d8a">
-
 
 I used the following resources to complete this project:
 
