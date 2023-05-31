@@ -24,6 +24,7 @@ I used the following resources to complete this project:
 
 ## Deployment
 [GitHub Pages](https://devramirez.github.io/weather-dashboard/)
+
 [GitHub Repo](https://github.com/devramirez/weather-dashboard)
 
 ## License 
